@@ -1,0 +1,80 @@
+<div *ngIf="user" class="container bootstrap">
+  <div class="row">
+    <!--/col-3-->
+    <div class="col-3">
+      <div class="text-center">
+        <img src="https://www.w3schools.com/howto/img_avatar.png" class="avatar img-circle img-thumbnail" alt="avatar">
+        <h3>Hi, {{user.username}}</h3>
+      </div>
+    </div>
+    <div class="col-sm-8 snippet">
+      <ul class="nav nav-pills mb-1" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#" role="tab"
+             aria-controls="pills-home" aria-selected="true">Profile Information</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="home">
+          <div class="form-group">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-6">
+                  <label for="username">
+                    <h5>Username</h5>
+                  </label>
+                  <input [ngModel]="user.username"
+                         type="text" class="form-control"
+                         name="username" id="username"
+                         placeholder="first name"
+                         disabled>
+                </div>
+                <div class="col-6">
+                  <label for="email">
+                    <h5>Email</h5>
+                  </label>
+                  <input [ngModel]="user.email"
+                         type="email"
+                         class="form-control"
+                         name="email"
+                         id="email"
+                         disabled
+                         placeholder="you@email.com">
+                </div>
+              </div>
+            </div>
+            <div class="panel">
+              <div class="social-media">
+                <h4>Social Media</h4>
+                <a href="https://facebook.com" class="btn btn-dark mr-2" target="_blank">
+                  <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
+                </a>
+                <a href="https://twitter.com" class="btn btn-dark mr-2" target="_blank">
+                  <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+                </a>
+                <a href="https://snapchat.com" class="btn btn-dark mr-2" target="_blank">
+                  <i class="fa fa-snapchat-square fa-2x" aria-hidden="true"></i>
+                </a>
+                <a href="https://instagram.com" class="btn btn-dark mr-2" target="_blank">
+                  <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+                </a>
+                <a href="https://pinterest.com" class="btn btn-dark mr-2" target="_blank">
+                  <i class="fa fa-pinterest-square fa-2x" aria-hidden="true"></i>
+                </a>
+                <a href="https://reddit.com" class="btn btn-dark mr-2" target="_blank">
+                  <i class="fa fa-reddit-square fa-2x" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!--/tab-pane-->
+        </div>
+        <!--/tab-pane-->
+      </div>
+      <!--/tab-content-->
+    </div>
+    <!--/col-9-->
+  </div>
+</div>
+<!--/row-->

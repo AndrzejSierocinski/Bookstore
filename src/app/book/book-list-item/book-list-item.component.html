@@ -1,0 +1,11 @@
+<a routerLink="/books/{{book._id}}">
+	<div class="card book-card">
+	  <img class="card-img-top" src="{{book.image}}" alt="">
+	  <div class="card-block">
+      <h4 class="card-title">{{book.title}}</h4>
+      <h6 class="card-subtitle"> {{book.author}}</h6>
+      <p class="card-text">${{book.price}}</p>
+	  </div>
+	</div>
+</a>
+

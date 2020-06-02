@@ -1,0 +1,41 @@
+<div class="booking">
+  <p class="book-title">{{book.title}}</p>
+  <div class="book-room-info">
+    <b>Author:</b> {{book.author}}<br>
+    <b>Publisher:</b> {{book.publisher}}<br>
+    <b>Category:</b> {{book.category|titlecase}}<br>
+    <b>ISBN:</b> {{book.ISBN}}<br>
+    <b>Publication:</b> {{book.publication}}<br>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col price-social-media-body">
+      <h3>Price: ${{book.price}}</h3>
+      <hr>
+      <div class="social-media">
+        <h4>Share</h4>
+        <a href="https://facebook.com" class="btn btn-dark mr-2" target="_blank">
+          <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
+        </a>
+        <a href="https://twitter.com" class="btn btn-dark mr-2" target="_blank">
+          <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+        </a>
+        <a href="https://snapchat.com" class="btn btn-dark mr-2" target="_blank">
+          <i class="fa fa-snapchat-square fa-2x" aria-hidden="true"></i>
+        </a>
+        <a href="https://instagram.com" class="btn btn-dark mr-2" target="_blank">
+          <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+        </a>
+        <a href="https://pinterest.com" class="btn btn-dark mr-2" target="_blank">
+          <i class="fa fa-pinterest-square fa-2x" aria-hidden="true"></i>
+        </a>
+        <a href="https://reddit.com" class="btn btn-dark mr-2" target="_blank">
+          <i class="fa fa-reddit-square fa-2x" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,30 @@
+<div [ngStyle]="style" class="editable-component">
+
+  <input *ngIf="isActiveInput"
+         class="{{className}}"
+         type="number"
+         min="0.01"
+         max="10000"
+         step="0.01"
+         [ngModel]="entity[entityField]|number:'1.2-2'"
+         (ngModelChange)="entity[entityField]=$event">
+  <span *ngIf="!isActiveInput" class="{{className}} inline"> {{transformView(entity[entityField])}} </span>
+  <button *ngIf="!isActiveInput"
+          class="btn btn-sm btn-warning btn-editable m-1"
+          (click)="isActiveInput = true">
+    Edit
+  </button>
+  <div class="block">
+    <button *ngIf="isActiveInput"
+            class="btn btn-sm btn-success btn-editable m-1"
+            (click)="updateEntity()">
+      Save
+    </button>
+
+    <button *ngIf="isActiveInput"
+            class="btn btn-sm btn-danger btn-editable m-1"
+            (click)="cancelUpdate()">
+      Cancel
+    </button>
+  </div>
+</div>

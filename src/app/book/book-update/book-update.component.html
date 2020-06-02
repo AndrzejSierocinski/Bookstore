@@ -1,0 +1,122 @@
+<section id="newBook" *ngIf="book">
+  <div class="book-form">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="page-title">Edit Book</h1>
+        <div class="form-group">
+          <label>
+            <i class="fa fa-list" aria-hidden="true"></i> Title
+          </label>
+          <app-editable-input
+            [entity]="book"
+            [field]="'title'"
+            [className]="'book-title'"
+            (entityUpdated)="updateBook(book._id, $event)">
+          </app-editable-input>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <i class="fa fa-user-circle" aria-hidden="true"></i> Author
+          </label>
+            <app-editable-input
+              [entity]="book"
+              [field]="'author'"
+              [className]="'book-author'"
+              (entityUpdated)="updateBook(book._id, $event)">
+            </app-editable-input>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <i class="fa fa-building" aria-hidden="true"></i> Publication Date
+          </label>
+            <app-editable-date
+              [entity]="book"
+              [field]="'publication'"
+              [className]="'book-publication'"
+              (entityUpdated)="updateBook(book._id, $event)">
+            </app-editable-date>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <i class="fa fa-building" aria-hidden="true"></i> Publisher
+          </label>
+            <app-editable-input
+              [entity]="book"
+              [field]="'publisher'"
+              [className]="'book-publisher'"
+              (entityUpdated)="updateBook(book._id, $event)">
+            </app-editable-input>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <i class="fa fa-list-alt" aria-hidden="true"></i> Category
+          </label>
+            <app-editable-select
+              [entity]="book"
+              [field]="'category'"
+              [options]="bookCategories"
+              [className]="'book-category'"
+              (entityUpdated)="updateBook(book._id, $event)">
+            </app-editable-select>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <i class="fa fa-barcode" aria-hidden="true"></i> ISBN
+          </label>
+            <app-editable-input
+              type="text"
+              [entity]="book"
+              [field]="'ISBN'"
+              [className]="'book-ISBN'"
+              (entityUpdated)="updateBook(book._id, $event)">
+            </app-editable-input>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Description
+          </label>
+            <app-editable-textarea
+              [entity]="book"
+              [field]="'description'"
+              [className]="'book-description'"
+              [rows]="'8'"
+              [cols]="'52'"
+              (entityUpdated)="updateBook(book._id, $event)">
+            </app-editable-textarea>
+        </div>
+        <label>
+          <i class="fa fa-file-image-o" aria-hidden="true"></i> Image
+        </label>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-12">
+                <app-editable-image
+                  [entity]="book"
+                  [field]="'image'"
+                  [className]="'book-image'"
+                  (entityUpdated)="updateBook(book._id, $event)">
+                </app-editable-image>
+              </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>
+            <i class="fa fa-usd" aria-hidden="true"></i> Price
+          </label>
+              <app-input-price
+                [entity]="book"
+                [field]="'price'"
+                [className]="'book-price'"
+                (entityUpdated)="updateBook(book._id, $event)">
+              </app-input-price>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

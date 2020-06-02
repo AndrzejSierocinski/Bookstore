@@ -1,0 +1,142 @@
+@import "src/styles/variables";
+
+.book-button {
+  float: right;
+  padding: -30px!important;
+}
+
+.book-confirm {
+  float: right;
+  margin: -20px 0 0 0;
+}
+.btn-edit {
+  //font-size: 12px;
+  color: white;
+  background: #ffc107;
+  padding: 10px 15px;
+  //float: right;
+  margin-right: 10px;
+}
+
+.btn-edit:focus {
+  //color: #212529;
+  background-color: #e0a800;
+  border-color: #d39e00;
+  box-shadow: 0 0 0 .2rem rgba(222, 170, 12, .5)
+}
+.btn-edit:hover {
+  background-color: #e0a800;
+  border-color: #d39e00
+}
+.btn-delete {
+  //font-size: 12px;
+  color: white;
+  padding: 10px 15px;
+  //float: right;
+  margin-right: 10px;
+}
+
+#bookDetails {
+  .upper-section {
+    img {
+      width: 100%;
+    }
+
+    margin-bottom: 30px;
+  }
+
+  .details-section {
+    color: $main-text-color;
+    text-align: justify;
+
+    .book {
+      &-type {
+        font-size: 14px;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin: 0;
+      }
+
+      .btn-editor {
+        margin: 0 0 60px 0;
+        float: right;
+
+        p {
+          margin-top: 12px;
+        }
+      }
+
+      &-owner {
+        float: right;
+
+        img {
+          height: 50px;
+          border-radius: 50%;
+          display: block;
+          margin: 0 auto;
+        }
+
+        span {
+          display: block;
+          font-size: 13px;
+          font-weight: 300;
+        }
+      }
+
+      &-title {
+        margin-bottom: 5px;
+        font-size: 32px;
+        font-weight: 700;
+      }
+
+      &-author {
+        font-size: 14px;
+        font-weight: 300;
+        margin-bottom: 20px;
+      }
+
+      &-publisher {
+        font-size: 14px;
+        font-weight: 300;
+        margin-bottom: 20px;
+      }
+
+      &-room-info {
+        margin-bottom: 20px;
+        font-weight: 300;
+        font-size: 16px;
+
+        span {
+          margin-right: 10px;
+        }
+
+        .book-ISBN {
+          margin-right: 0;
+        }
+
+        i {
+          margin-right: 2px;
+        }
+      }
+
+      &-description {
+        font-weight: 300;
+        margin-bottom: 20px;
+      }
+
+      &-assets {
+        .title {
+          margin-bottom: 10px;
+          font-weight: 700;
+          font-size: 22px;
+        }
+
+        span {
+          display: block;
+          margin-bottom: 15px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

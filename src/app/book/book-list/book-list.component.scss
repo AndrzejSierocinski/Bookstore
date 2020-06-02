@@ -1,0 +1,15 @@
+pagination-controls {
+  justify-content: center;
+  display: flex;
+}
+
+input {
+  width: 300px;
+  background: url(src/assets/images/iconfinder_search_1608826.png) no-repeat scroll 250px 1px;
+  background-size: 32px 32px;
+  background-position: right;
+}
+
+.ng-container {
+  padding-left: 150px;
+}

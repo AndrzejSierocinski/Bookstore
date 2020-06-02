@@ -1,0 +1,33 @@
+<div [ngStyle]="style" class="editable-component">
+  <ng-select *ngIf="isActiveInput" [items]="options"
+             class="custom"
+             name="category"
+             placeholder="Select one category"
+             bindLabel="category"
+             [editableSearchTerm]="true"
+             [ngModel]="entity[entityField]|titlecase"
+             (ngModelChange)="entity[entityField]=$event"
+  >
+  </ng-select>
+  <span *ngIf="!isActiveInput" class="{{className}} inline"> {{entity[entityField]|titlecase}} </span>
+
+  <div class="inline">
+    <button *ngIf="!isActiveInput"
+      class="btn btn-sm btn-warning btn-editable m-1"
+      (click)="isActiveInput = true">
+      Edit
+    </button>
+
+    <button *ngIf="isActiveInput"
+      class="btn btn-sm btn-success btn-editable m-1"
+      (click)="updateEntity()">
+      Save
+    </button>
+
+    <button *ngIf="isActiveInput"
+      class="btn btn-sm btn-danger btn-editable m-1"
+      (click)="cancelUpdate()">
+      Cancel
+    </button>
+  </div>
+</div>

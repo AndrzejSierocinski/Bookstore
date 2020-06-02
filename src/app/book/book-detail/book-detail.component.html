@@ -1,0 +1,50 @@
+<section id="bookDetails" *ngIf="book">
+  <div class="upper-section">
+    <div class="row justify-content-start">
+      <div class="col-md-6">
+        <img src="{{book.image}}" alt="">
+      </div>
+      <div class="col-md-6 ">
+        <app-book-detail-booking
+          [book]="book">
+        </app-book-detail-booking>
+      </div>
+    </div>
+  </div>
+
+  <div class="details-section">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="book">
+          <div class="book-assets">
+            <p class="title">
+              <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Description
+            </p>
+            <div class="row">
+            </div>
+          </div>
+          <p class="book-description">
+            {{book.description}}
+          </p>
+
+          <div class="card-body book-button">
+            <button *ngIf="bookDelete !== false" class="btn btn-edit" routerLink="/books/{{book._id}}/edit">Edit</button>
+            <button (click)="bookDelete=false" *ngIf="bookDelete !== false"
+                    class="btn btn-danger btn-delete">Delete
+            </button>
+            <div *ngIf="!bookDelete">
+              <button (click)="deleteBook(book._id)" class="btn btn-success m-1">Yes
+              </button>
+              <button (click)="bookDelete = true" class="btn btn-danger m-1">No
+              </button>
+            </div>
+          </div>
+          <hr>
+        </div>
+      </div>
+    </div>
+    <span class="book-confirm">
+      <p *ngIf="!bookDelete" class="confirm-message">Are you sure to delete this item?</p>
+    </span>
+  </div>
+</section>

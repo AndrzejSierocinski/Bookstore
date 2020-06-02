@@ -1,0 +1,51 @@
+<section id="userBooks">
+  <h1 class="page-title">My Books</h1>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Search Book" [(ngModel)]="term">
+  </div>
+  <div class="row">
+    <ng-container *ngIf="books && books.length > 0">
+      <div *ngFor="let book of books | filter:term
+    | paginate: { itemsPerPage: 6, currentPage: page }; let i = index" class="col-md-4">
+        <div class="card text-center">
+          <div class="card-block">
+            <h3 class="card-title">{{book.author}}</h3>
+            <h5 class="card-subtitle">{{book.title}}</h5>
+          </div>
+          <h6>Created at {{book.createdAt | dateFormatPipe}}</h6>
+          <div class="card-header text-muted">
+            <a class="btn btn-info btn-read-more" routerLink="/books/{{book._id}}">Read More</a>
+            <a class="btn btn-warning btn-edit" routerLink="/books/{{book._id}}/edit">Edit</a>
+            <button (click)="bookDelete = i"
+                    *ngIf="bookDelete !== i"
+                    type="button"
+                    class="btn btn-delete btn-danger">Delete
+            </button>
+            <div *ngIf="bookDelete === i">
+              <p class="confirm-message">Are you sure to delete this item?</p>
+              <button (click)="deleteBook(book._id)"
+                      class="btn btn-success mr-2">Yes
+              </button>
+              <button (click)="bookDelete = undefined"
+                      class="btn btn-danger">No
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    <div *ngIf="books && books.length === 0" class="col-md-8">
+      <div class="alert alert-warning">
+        You dont have any books currenty created. If you want advertised your property
+        please follow this link.
+        <br>
+        <a class="btn btn-primary" routerLink="/books/new">Register Book</a>
+      </div>
+    </div>
+  </div>
+  <pagination-controls class="my-pagination" (pageChange)="page = $event"
+                       responsive="true"
+                       previousLabel="Previous"
+                       nextLabel="Next">
+  </pagination-controls>
+</section>
