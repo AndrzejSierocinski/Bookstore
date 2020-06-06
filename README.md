@@ -1,6 +1,7 @@
 # Bookstore
-Check out this project online at http://bookstoreeb-env.eba-asbybsbg.eu-central-1.elasticbeanstalk.com/
-
+Check out this project online at http://bookstoreeb-env.eba-asbybsbg.eu-central-1.elasticbeanstalk.com/    
+Login:john.cena@o2.pl   
+Password:testtest   
 ## Book Store Management MEAN Stack
 
 MEAN is a full-stack JavaScript open-source solution, which provides a solid starting point for [MongoDB](http://www.mongodb.org/), [Node.js](http://www.nodejs.org/), [Express](http://expressjs.com/)
