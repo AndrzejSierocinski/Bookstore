@@ -1,5 +1,5 @@
 # Bookstore
-Check out this project online at http://bookstoreeb-env.eba-asbybsbg.eu-central-1.elasticbeanstalk.com/    
+Check out this project online at http://bookstore-env.eba-je2tsrcc.eu-central-1.elasticbeanstalk.com  
 Login:john.cena@o2.pl   
 Password:testtest   
 ## Book Store Management MEAN Stack
